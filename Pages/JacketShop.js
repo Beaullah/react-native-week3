@@ -13,15 +13,17 @@ const JacketShop = () => {
           <AntDesign name="shoppingcart" size={24} color="blue" />
         </View>
       </View>
-      <View>
-        <Text style={styles.woman}>Women Jacket</Text>
-        <View>
-          <Button title="search for jacket" />
-          <Text>Filter</Text>
+      <Text style={styles.woman}>Women Jacket</Text>
+      <View style={styles.buttonContainer}>
+        <View style={styles.button}>
+          <Button title="search for jacket                        filter" />
         </View>
       </View>
       <View>
-        <Image />
+        <Image
+          source={require("../assets/jacket1.jpg")}
+          style={{ height: 200, width: 200 }}
+        />
 
         <View>
           <Text>Bike Jacket</Text>
@@ -92,6 +94,13 @@ const styles = StyleSheet.create({
   woman: {
     fontWeight: 900,
     fontSize: 20,
+  },
+  buttonContainer: {},
+  button: {
+    height: 50,
+    width: "100%",
+    borderRadius: 90,
+    backgroundColor: "yellow",
   },
 });
 
