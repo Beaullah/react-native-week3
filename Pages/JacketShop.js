@@ -19,55 +19,91 @@ const JacketShop = () => {
           <Button title="search for jacket                        filter" />
         </View>
       </View>
-      <View>
-        <Image
-          source={require("../assets/jacket1.jpg")}
-          style={{ height: 200, width: 200 }}
-        />
-
+      <View style={styles.image}>
         <View>
-          <Text>Bike Jacket</Text>
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="staro" />
+          <Image
+            source={require("../assets/jacket1.jpg")}
+            style={{ height: 80, width: 80 }}
+          />
+        </View>
+        <View style={styles.shop}>
+          <Text>Bike Jacket SoftWarm Shell</Text>
+          <View style={styles.icons}>
+            <View style={styles.starIcon}>
+              <AntDesign name="star" color="yellow" />
+            </View>
+            <View style={styles.starIcon}>
+              <AntDesign name="star" color="yellow" />
+            </View>
+            <View style={styles.starIcon}>
+              <AntDesign name="star" color="yellow" />
+            </View>
+            <View style={styles.starIcon}>
+              <AntDesign name="star" color="yellow" />
+            </View>
+            <View style={styles.starIcon}>
+              <AntDesign name="staro" />
+            </View>
+          </View>
+          <Text>$99</Text>
         </View>
       </View>
-      <View>
-        <Image />
-
+      <View style={styles.image}>
         <View>
-          <Text>Bike Jacket</Text>
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="staro" />
+          <Image
+            source={require("../assets/jacket2.jpg")}
+            style={{ height: 80, width: 80 }}
+          />
+        </View>
+        <View style={styles.shop}>
+          <Text>Bike Jacket SoftWarm Shell</Text>
+          <View style={styles.icons}>
+            <View style={styles.starIcon}>
+              <AntDesign name="star" color="yellow" />
+            </View>
+            <View style={styles.starIcon}>
+              <AntDesign name="star" color="yellow" />
+            </View>
+            <View style={styles.starIcon}>
+              <AntDesign name="star" color="yellow" />
+            </View>
+            <View style={styles.starIcon}>
+              <AntDesign name="star" color="yellow" />
+            </View>
+            <View style={styles.starIcon}>
+              <AntDesign name="staro" />
+            </View>
+          </View>
+          <Text>$99</Text>
         </View>
       </View>
-      <View>
-        <Image />
-
+      <View style={styles.image}>
         <View>
-          <Text>Bike Jacket</Text>
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="staro" />
+          <Image
+            source={require("../assets/jacket3.jpg")}
+            style={{ height: 80, width: 80 }}
+          />
         </View>
-      </View>
-      <View>
-        <Image />
-
-        <View>
-          <Text>Bike Jacket</Text>
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="star" color="yellow" />
-          <AntDesign name="staro" />
+        <View style={styles.shop}>
+          <Text>Bike Jacket SoftWarm Shell</Text>
+          <View style={styles.icons}>
+            <View style={styles.starIcon}>
+              <AntDesign name="star" color="yellow" />
+            </View>
+            <View style={styles.starIcon}>
+              <AntDesign name="star" color="yellow" />
+            </View>
+            <View style={styles.starIcon}>
+              <AntDesign name="star" color="yellow" />
+            </View>
+            <View style={styles.starIcon}>
+              <AntDesign name="star" color="yellow" />
+            </View>
+            <View style={styles.starIcon}>
+              <AntDesign name="staro" />
+            </View>
+          </View>
+          <Text>$99</Text>
         </View>
       </View>
     </View>
@@ -100,7 +136,28 @@ const styles = StyleSheet.create({
     height: 50,
     width: "100%",
     borderRadius: 90,
-    backgroundColor: "yellow",
+    backgroundColor: "white",
+  },
+  shop: {
+    gap: 6,
+  },
+  image: {
+    flex: 1,
+    flexDirection: "row",
+    paddingTop: 10,
+    gap: 30,
+    // display: "grid",
+    // gridTemplateRows: "100px 200px",
+    // gridTemplateColumns: "1fr 2fr",
+    // gridRowGap: 10 /* Spacing between rows */,
+    // gridColumnGap: 20 /* Spacing between columns */,
+  },
+  icons: {
+    flexDirection: "row", // To place the stars side by side horizontally
+    alignItems: "center", // Align the stars vertically in the middle of the container
+  },
+  starIcon: {
+    marginRight: 5, // Adjust this value to control the spacing between the stars
   },
 });
 
