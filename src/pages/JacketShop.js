@@ -22,7 +22,7 @@ const JacketShop = () => {
       <View style={styles.image}>
         <View>
           <Image
-            source={require("../assets/jacket1.jpg")}
+            source={require("../../assets/jacket1.jpg")}
             style={{ height: 80, width: 80 }}
           />
         </View>

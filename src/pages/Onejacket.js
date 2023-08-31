@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
-const JacketShop = () => {
+const Onejacket = () => {
   return (
     <View style={styles.container}>
       <View style={styles.menuIcons}>
@@ -21,7 +21,7 @@ const JacketShop = () => {
         </View>
       </View>
       <View style={styles.centerImage}>
-        <Image source={require("../assets/jacket1.jpg")} />
+        <Image source={require("../../assets/jacket1.jpg")} />
       </View>
       <View>
         <Text style={{ fontSize: 25 }}>Red Women Jacket</Text>
@@ -161,4 +161,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default JacketShop;
+export default Onejacket;

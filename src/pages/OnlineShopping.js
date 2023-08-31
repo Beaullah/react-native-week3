@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Image, Button } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 
-const Onlineshop = () => {
+const OnlineShopping = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Online shopping</Text>
@@ -13,7 +13,7 @@ const Onlineshop = () => {
       <View style={styles.middle}>
         <Image
           style={{ height: 200, width: 200 }}
-          source={require("../assets/shoopping.png")}
+          source={require("../../assets/shoopping.png")}
         />
         <View style={styles.button}>
           <Button color="white" title="Get started" />
@@ -28,7 +28,7 @@ const Onlineshop = () => {
   );
 };
 
-export default Onlineshop;
+export default OnlineShopping;
 
 const styles = StyleSheet.create({
   container: {

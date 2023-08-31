@@ -1,8 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, Button } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  Button,
+  TouchableOpacity,
+} from "react-native";
 import { Entypo } from "@expo/vector-icons";
 
-const Onlineshop = () => {
+const AddToCart = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>ADD TO CART</Text>
@@ -13,11 +20,17 @@ const Onlineshop = () => {
       <View style={styles.middle}>
         <Image
           style={{ height: 200, width: 200 }}
-          source={require("../assets/shop.png")}
+          source={require("../../assets/shop.png")}
         />
-        <View style={styles.button}>
-          <Button color="white" title="Get started" />
-        </View>
+        <TouchableOpacity>
+          <Button
+            style={styles.button}
+            onPress={() => {
+              navigation.navigate("PaymentSuccessful");
+            }}
+            title="next"
+          />
+        </TouchableOpacity>
       </View>
       <View style={styles.footer}>
         <Text>Previous</Text>
@@ -28,7 +41,7 @@ const Onlineshop = () => {
   );
 };
 
-export default Onlineshop;
+export default AddToCart;
 
 const styles = StyleSheet.create({
   container: {
@@ -40,12 +53,11 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   button: {
-    marginTop: 15,
+    marginTop: 25,
     borderWidth: 1,
     height: 40,
     width: 150,
     borderRadius: 40,
-    backgroundColor: "#6C63FF",
   },
   heading: {
     fontSize: 25,
@@ -60,7 +72,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 100,
     paddingHorizontal: 20,
   },
 });
