@@ -1,4 +1,4 @@
-import { StyleSheet, View } from "react-native";
+import { Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { createStackNavigator } from "@react-navigation/stack";
@@ -14,8 +14,25 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Online Shopping" component={OnlineShopping} />
-        <Stack.Screen name="Add to cart" component={AddToCart} />
+        <Stack.Screen
+          options={{
+            title: "o Shopping",
+            headerStyle: {
+              backgroundColor: "red",
+            },
+            headerTintColor: "white",
+            headerTitleAlign: "center",
+            headerRight: () => (
+              <Text style={{ color: "white", marginRight: 10 }}>Icon</Text>
+            ),
+            headerLeft: () => (
+              <Text style={{ color: "white", marginLeft: 10 }}>Icons</Text>
+            ),
+          }}
+          name="Online Shopping"
+          component={OnlineShopping}
+        />
+        <Stack.Screen name="Addtocart" component={AddToCart} />
         <Stack.Screen name="PaymentSuccessful" component={Pay} />
       </Stack.Navigator>
     </NavigationContainer>
