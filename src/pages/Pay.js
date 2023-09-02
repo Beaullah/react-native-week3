@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, Image, Button } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 
-const Pay = () => {
+const Pay = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>PAYMENT SUCCESSFUL</Text>
@@ -15,13 +15,17 @@ const Pay = () => {
           style={{ height: 200, width: 200 }}
           source={require("../../assets/payment.png")}
         />
-        <View style={styles.button}>
-          <Button color="white" title="Get started" />
-        </View>
+
+        <Button title="     Paid     " />
       </View>
       <View style={styles.footer}>
-        <Text>Previous</Text>
-        <Entypo name="dots-three-horizontal" size={24} color="black" />
+        <Text
+          onPress={() => {
+            navigation.navigate("Addtocart");
+          }}
+        >
+          Previous
+        </Text>
       </View>
     </View>
   );
@@ -60,7 +64,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 120,
     paddingHorizontal: 20,
   },
 });

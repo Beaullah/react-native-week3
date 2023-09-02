@@ -10,10 +10,9 @@ import {
 import { Entypo } from "@expo/vector-icons";
 
 const AddToCart = ({ route, navigation }) => {
-  const { newTitle } = route.paramas;
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>{newTitle}</Text>
+      <Text style={styles.heading}>Add to cart</Text>
       <Text style={styles.p}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dkkkkolore magna aliqua. Ut
@@ -34,9 +33,21 @@ const AddToCart = ({ route, navigation }) => {
         </TouchableOpacity>
       </View>
       <View style={styles.footer}>
-        <Text>Previous</Text>
+        <Text
+          onPress={() => {
+            navigation.navigate("Online Shopping");
+          }}
+        >
+          Previous
+        </Text>
         <Entypo name="dots-three-horizontal" size={24} color="black" />
-        <Text>Skip</Text>
+        <Text
+          onPress={() => {
+            navigation.navigate("PaymentSuccessful");
+          }}
+        >
+          Skip
+        </Text>
       </View>
     </View>
   );

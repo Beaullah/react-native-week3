@@ -13,25 +13,17 @@ export default function App() {
   const Stack = createStackNavigator();
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          options={{
-            title: "o Shopping",
-            headerStyle: {
-              backgroundColor: "red",
-            },
-            headerTintColor: "white",
-            headerTitleAlign: "center",
-            headerRight: () => (
-              <Text style={{ color: "white", marginRight: 10 }}>Icon</Text>
-            ),
-            headerLeft: () => (
-              <Text style={{ color: "white", marginLeft: 10 }}>Icons</Text>
-            ),
-          }}
-          name="Online Shopping"
-          component={OnlineShopping}
-        />
+      <Stack.Navigator
+        screenOptions={{
+          title: "Shopping App",
+          headerStyle: {
+            backgroundColor: "grey",
+          },
+          headerTintColor: "white",
+          headerTitleAlign: "center",
+        }}
+      >
+        <Stack.Screen name="Online Shopping" component={OnlineShopping} />
         <Stack.Screen name="Addtocart" component={AddToCart} />
         <Stack.Screen name="PaymentSuccessful" component={Pay} />
       </Stack.Navigator>

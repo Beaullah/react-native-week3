@@ -23,9 +23,14 @@ const OnlineShopping = ({ navigation }) => {
         />
       </View>
       <View style={styles.footer}>
-        <Text>Previous</Text>
         <Entypo name="dots-three-horizontal" size={24} color="black" />
-        <Text>Skip</Text>
+        <Text
+          onPress={() => {
+            navigation.navigate("Addtocart", { newTitle: "Oh from shopping" });
+          }}
+        >
+          Skip
+        </Text>
       </View>
     </View>
   );
@@ -63,7 +68,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 100,
     paddingHorizontal: 20,
   },
 });
